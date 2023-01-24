@@ -1,13 +1,14 @@
 import React from 'react'
-
-function header() {
+import './Header.css'
+import {AiFillEdit} from 'react-icons/ai'
+function Header() {
   return (
-    <>
         <div className="header-container">
-        <h1>Welcome to Google Notes</h1>
+        <AiFillEdit style={{fontSize:"40px"}}/>
+        <h1>NoteBox</h1>
+        <button className='create-button'>Create A Note</button>
         </div>
-    </>
   )
 }
 
-export default header
+export default Header

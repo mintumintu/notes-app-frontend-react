@@ -1,0 +1,14 @@
+.header-container{
+    display: flex;
+    background-color: black;
+    color:white;
+    margin: 0px;
+}
+.create-button{
+    margin-left: 65%;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+}
