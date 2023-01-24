@@ -16,7 +16,7 @@ function App() {
       </div>
       <div className='notes-container'>
       {  notes.map((note)=>
-            <Note heading={note.title} content={note.content}/>
+            <Note heading={note.title} content={note.content} isComplete={note.isComplete}/>
             )}
       </div>
       </div>

@@ -19,7 +19,7 @@ const Register = ()=>{
           body: JSON.stringify({
             title: title,
             content: content,
-            isCompleted: false,
+            isCompleted: 'false'
           }),
         });
         let resJson = await res.json();

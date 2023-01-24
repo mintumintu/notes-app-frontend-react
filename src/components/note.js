@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import './Note.css'
 import {MdDelete,MdMode,MdOutlineDone} from 'react-icons/md'
 
-function Note({heading,content}) {
+function Note({heading,content,isComplete}) {
 
   return (
     <>
     <div className='note-container-main'>
       <div className='note-heading'>
-       <p className='note-heading-paragraph'> {heading}</p>
+       <p className='note-heading-paragraph'>{heading}</p>
       </div>
       <div className='note-content'>
        <p className='note-content-paragraph'> {content}</p>
