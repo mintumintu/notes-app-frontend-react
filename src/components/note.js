@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Note.css'
+import {MdDelete,MdMode,MdOutlineDone} from 'react-icons/md'
 
 function Note({heading,content}) {
+
   return (
     <>
     <div className='note-container-main'>
@@ -10,6 +12,9 @@ function Note({heading,content}) {
       </div>
       <div className='note-content'>
        <p className='note-content-paragraph'> {content}</p>
+      </div>
+      <div className='note-buttons'>
+        <p className='option-done'><MdOutlineDone /></p><p className='option-delete'><MdDelete /></p><p className='option-update'><MdMode /></p>
       </div>
     </div>
     </>

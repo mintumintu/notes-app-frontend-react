@@ -23,7 +23,7 @@ const Register = ()=>{
           }),
         });
         let resJson = await res.json();
-        if (resJson.status === 200) {
+        if (res.status === 200) {
           setTitle("");
           setContent("");
           setMessage("User created successfully");
