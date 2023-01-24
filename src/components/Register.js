@@ -1,6 +1,7 @@
 import React from 'react';
 import './Register.css'
 import { useState } from 'react';
+import './Register.css'
 const Register = ()=>{
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -22,7 +23,7 @@ const Register = ()=>{
           }),
         });
         let resJson = await res.json();
-        if (res.status === 200) {
+        if (resJson.status === 200) {
           setTitle("");
           setContent("");
           setMessage("User created successfully");
@@ -35,7 +36,7 @@ const Register = ()=>{
     };
   
     return (
-      <div className="App">
+      <div className="register-form-container">
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -49,7 +50,7 @@ const Register = ()=>{
             placeholder="Note Description"
             onChange={(e) => setContent(e.target.value)}
           />  
-          <button type="submit">Create</button>
+          <button type="submit" className='create-button'>Create</button>
   
           <div className="message">{message ? <p>{message}</p> : null}</div>
         </form>

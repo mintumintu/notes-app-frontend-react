@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header'
 import Note from './components/Note'
+import Register from './components/Register'
 
 function App() {
   const[notes,setNotes]= useState([])
@@ -9,12 +10,17 @@ function App() {
   return (
     <>
       <Header />
+      <div className='body-container'>
+      <div className='form-container'>
+      <Register />
+      </div>
       <div className='notes-container'>
       {  notes.map((note)=>
             <Note heading={note.title} content={note.content}/>
             )}
       </div>
-    </>
+      </div>
+  </>
   );
 }
 
