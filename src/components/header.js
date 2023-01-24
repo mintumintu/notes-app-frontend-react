@@ -6,7 +6,7 @@ function Header() {
         <div className="header-container">
         <AiFillEdit style={{fontSize:"40px"}}/>
         <h1>NoteBox</h1>
-        <button id='create-note-button'>Create A Note</button>
+        {/* <button id='create-note-button'>Create A Note</button> */}
         </div>
   )
 }
