@@ -1,14 +1,15 @@
 import React from 'react'
+import './Note.css'
 
-function Note(props) {
+function Note({heading,content}) {
   return (
     <>
-    <div className='note-container'>
+    <div className='note-container-main'>
       <div className='note-heading'>
-        {props.heading}
+       <p className='note-heading-paragraph'> {heading}</p>
       </div>
       <div className='note-content'>
-        {props.content}
+       <p className='note-content-paragraph'> {content}</p>
       </div>
     </div>
     </>

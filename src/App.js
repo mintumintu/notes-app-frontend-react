@@ -1,14 +1,19 @@
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header'
-// import NotesContainer from './components/NotesContainer'
+import Note from './components/Note'
 
 function App() {
-var data;
-  fetch("http://localhost:4001/allnotes").then(response=>response.json()).then(response => data=response);
+  const[notes,setNotes]= useState([])
+  fetch("http://localhost:4001/allnotes").then(response=>response.json()).then(response => setNotes(response));
   return (
     <>
       <Header />
-      {/* <NotesContainer data={data}/> */}
+      <div className='notes-container'>
+      {  notes.map((note)=>
+            <Note heading={note.title} content={note.content}/>
+            )}
+      </div>
     </>
   );
 }
