@@ -8,6 +8,9 @@ function Note({heading,content,isComplete,id}) {
       method: "DELETE"
     }).then((response)=>response.json()).then((response)=>console.log(response))
   }
+  function handleonComplete(){
+    
+  }
 
   return (
     <>
@@ -19,7 +22,7 @@ function Note({heading,content,isComplete,id}) {
        <p className='note-content-paragraph'> {content}</p>
       </div>
       <div className='note-buttons'>
-        <p className='option-done'><MdOutlineDone /></p><p className='option-delete' onClick={handleonClick}><MdDelete /></p><p className='option-update'><MdMode /></p>
+        <p className='option-done' onClick={handleonComplete}><MdOutlineDone /></p><p className='option-delete' onClick={handleonClick}><MdDelete /></p><p className='option-update'><MdMode /></p>
       </div>
     </div>
     </>
